@@ -6,6 +6,6 @@ public class PlayerPerformance
     public string Server { get; set; } = string.Empty;
     public string Region { get; set; } = string.Empty;
 
-    // Add more properties as needed based on Warcraft Logs API response
-    // For example: rankings, parses, item level, etc.
+    // Her kan jeg legge til flere felt for henting i API
+    // For eksempel: rankings, parses, item level, etc.
 }

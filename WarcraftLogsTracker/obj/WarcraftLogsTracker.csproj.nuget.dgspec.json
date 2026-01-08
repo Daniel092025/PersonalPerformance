@@ -396,10 +396,6 @@
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[10.0.1, )"
-            },
-            "System.Text.Json": {
-              "target": "Package",
-              "version": "[10.0.1, )"
             }
           },
           "imports": [
