@@ -1,5 +1,9 @@
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using PersonalPerformance.Core.Models;
+
+namespace PersonalPerformance.Core.Services;
 
 public class WarcraftLogsService : IWarcraftLogsService
 {
@@ -19,8 +23,8 @@ public class WarcraftLogsService : IWarcraftLogsService
         var authValue = Convert.ToBase64String(
             Encoding.UTF8.GetBytes($"{_config.ClientId}:{_config.ClientSecret}")
         );
-        
-        _httpClient.DefaultRequestHeaders.Authorization = 
+
+        _httpClient.DefaultRequestHeaders.Authorization =
             new AuthenticationHeaderValue("Basic", authValue);
 
         var content = new FormUrlEncodedContent(new[]
@@ -29,7 +33,7 @@ public class WarcraftLogsService : IWarcraftLogsService
         });
 
         var response = await _httpClient.PostAsync(
-            "https://www.warcraftlogs.com/oauth/token", 
+            "https://www.warcraftlogs.com/oauth/token",
             content
         );
 
@@ -38,7 +42,7 @@ public class WarcraftLogsService : IWarcraftLogsService
         var jsonResponse = await response.Content.ReadAsStringAsync();
         var tokenResponse = JsonSerializer.Deserialize<TokenResponse>(jsonResponse);
 
-        return tokenResponse?.AccessToken ?? throw new InvalidOperationException ("No token received");
+        return tokenResponse?.AccessToken ?? throw new InvalidOperationException("No token received");
     }
 
     public async Task<PlayerPerformance> GetPlayerPerformanceAsync(string characterName, string server, string region)

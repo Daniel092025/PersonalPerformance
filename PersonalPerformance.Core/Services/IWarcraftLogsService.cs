@@ -1,3 +1,7 @@
+using PersonalPerformance.Core.Models;
+
+namespace PersonalPerformance.Core.Services;
+
 public interface IWarcraftLogsService
 {
     Task<string> GetAccessTokenAsync();

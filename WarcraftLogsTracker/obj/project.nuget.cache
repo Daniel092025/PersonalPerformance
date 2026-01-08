@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "u/IZy13btvU=",
+  "dgSpecHash": "qNf040OdWjg=",
   "success": true,
   "projectFilePath": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\borge\\.nuget\\packages\\microsoft.extensions.configuration.binder\\10.0.1\\microsoft.extensions.configuration.binder.10.0.1.nupkg.sha512",
     "C:\\Users\\borge\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\10.0.1\\microsoft.extensions.configuration.fileextensions.10.0.1.nupkg.sha512",
     "C:\\Users\\borge\\.nuget\\packages\\microsoft.extensions.configuration.json\\10.0.1\\microsoft.extensions.configuration.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\borge\\.nuget\\packages\\microsoft.extensions.configuration.usersecrets\\10.0.0\\microsoft.extensions.configuration.usersecrets.10.0.0.nupkg.sha512",
     "C:\\Users\\borge\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.1\\microsoft.extensions.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\borge\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.1\\microsoft.extensions.dependencyinjection.abstractions.10.0.1.nupkg.sha512",
     "C:\\Users\\borge\\.nuget\\packages\\microsoft.extensions.diagnostics\\10.0.1\\microsoft.extensions.diagnostics.10.0.1.nupkg.sha512",

@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("0e7c2cfb-ff6b-477a-b2f7-e32593033c2d")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("WarcraftLogsTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f5b8ca255ccec05c567e75cbf949ea4e5e3a69f")]
 [assembly: System.Reflection.AssemblyProductAttribute("WarcraftLogsTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WarcraftLogsTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
