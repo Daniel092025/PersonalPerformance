@@ -1,4 +1,5 @@
 using System.Net.Http.Headers;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Text.Json;
 using Microsoft.VisualBasic;
@@ -42,10 +43,65 @@ public class WarcraftLogsService : IWarcraftLogsService
         string region)
     {
         var client = new GetGraphQLClientAsync();
+
+        // GraphQL query - Vi spesifiserer akkurat det vi vil ha
         var query = new GraphQLRequest
         {
             Query = @"
+                query($name: String!, $server: String!, $region: String!) {
+                    characterData {
+                        character(name: $name, serverSlug: $server, serverRegion: $region) {
+                            name
+                            server {
+                                name
+                            }
+                            recentReports(limit: 5){
+                                data {
+                                    code
+                                    title
+                                    startTime
+                                    fights(translate: true) {
+                                        id
+                                        name
+                                        kill
+                                        averageDps
+                                        startTime
+                                        endTime
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }",
+            Variables = new
+            {
+                name = characterName,
+                server = server.ToLower(),
+                region = region.ToUpper()
+            }
+        };
+
+        try
+        {
+            var response = await client.SendQueryAsync<GraphQLResponse>(query);
+
+            if(response.Errors?.Length > 0)
+            {
+                throw new InvalidOperationException(
+                    $"GraphQL errors: {string.Join(",", response.Errors.Select(e => e.Message))}"
+                
+                );
+            }
+
+            return MapToPlayerPerformance(response.Data, characterName, server);
+
         }
+
+        catch (Exception ex)
+        {
+            
+        }
+
     }
 
 
