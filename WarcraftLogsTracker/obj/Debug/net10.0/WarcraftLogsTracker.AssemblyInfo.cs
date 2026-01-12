@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WarcraftLogsTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d1b20b7387644d0b3ee69168c2b9b5b4b594b7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fed1d93219710a47ad0702e162559dc56e880f0a")]
 [assembly: System.Reflection.AssemblyProductAttribute("WarcraftLogsTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WarcraftLogsTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,13 +9,16 @@ public class WarcraftLogsService : IWarcraftLogsService
 {
     private readonly HttpClient _httpClient;
     private readonly WarcraftLogsConfig _config;
-    private string? _cachedToken; // We'll improve this later
+    private string? _cachedToken; 
+    private GraphQLHttpClient? _graphQLClient;
 
     public WarcraftLogsService(HttpClient httpClient, WarcraftLogsConfig config)
     {
         _httpClient = httpClient;
         _config = config;
     }
+
+    
 
     public async Task<string> GetAccessTokenAsync()
     {
