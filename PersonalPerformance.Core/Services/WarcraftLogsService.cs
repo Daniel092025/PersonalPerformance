@@ -1,6 +1,7 @@
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using Microsoft.VisualBasic;
 using PersonalPerformance.Core.Models;
 
 namespace PersonalPerformance.Core.Services;
@@ -18,7 +19,36 @@ public class WarcraftLogsService : IWarcraftLogsService
         _config = config;
     }
 
-    
+    private async Task<GraphQLHttpClient> GetGraphQLHttpClientAsync()
+    {
+        if (_graphQLClient == null)
+        {
+            var token = await GetAccessTokenAsync();
+            _graphQLClient = new GraphQLHttpClient(
+                _config.ApiBaseUrl + "/client",
+                new SystemTextJsonSerializer()
+            );
+
+            _graphQLClient.HttpClient.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue ("Bearer", token);
+        }
+
+        return _graphQLClient;
+    }
+
+    public async Task<PlayerPerformance> GetPlayerPerformanceAsync(
+        string characterName,
+        string server,
+        string region)
+    {
+        var client = new GetGraphQLClientAsync();
+        var query = new GraphQLRequest
+        {
+            Query = @"
+        }
+    }
+
+
 
     public async Task<string> GetAccessTokenAsync()
     {
