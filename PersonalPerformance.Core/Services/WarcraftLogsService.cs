@@ -99,7 +99,45 @@ public class WarcraftLogsService : IWarcraftLogsService
 
         catch (Exception ex)
         {
-            
+            Console.WriteLine($"Error fetching player data: {ex.Message}");
+            throw new InvalidOperationException(
+                $"Failed to fetch data for {characterName}-{server}", ex
+            );
+        }
+    }
+
+    private PlayerPerformance MapToPlayerPerformance(
+        GraphQLResponse data,
+        string characterName,
+        string server)
+    {
+        var character = data.CharacterData?.Character;
+
+        if (character == null)
+        {
+            return new PlayerPerformance
+            {
+                CharacterName = characterName,
+                Servername = server,
+                RecentReports = new List<ReportSummary>()
+            };
+        }
+        var performance = new PlayerPerformance
+        {
+            CharacterName = character.Name,
+            Servername = character.Server.Name,
+            RecentReports = new List<ReportSummary>()
+        };
+
+        foreach (var report in character.RecentReports?.Data ?? Enumerable.Empty<ReportData>())
+        {
+            var summary = new ReportSummary
+            {
+                ReportCode = report.Code,
+                Title = report.Title,
+                StartTime = DateTimeOffset.FromUnixTimeMilliseconds(report.StartTime).DateTime,
+                Fights = new List<FightPerformance>()
+            };
         }
 
     }
