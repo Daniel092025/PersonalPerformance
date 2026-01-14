@@ -64,7 +64,6 @@ public class WarcraftLogsService : IWarcraftLogsService
                                         id
                                         name
                                         kill
-                                        averageDps
                                         startTime
                                         endTime
                                     }
@@ -145,8 +144,8 @@ public class WarcraftLogsService : IWarcraftLogsService
                 {
                     FightId = fights.Id,
                     BossName = fights.Name,
-                    Dps = fights.AverageDPS ?? 0,
-                    Kill = fights.Kill,
+                    Dps = 0,
+                    Kill = fights.Kill ?? false,
                     DurationMs = fights.EndTime - fights.StartTime
                 });
             }

@@ -7,5 +7,5 @@ public class FightPerformance
     public double Dps { get; set; }
     public int Deaths { get; set; }
     public double DurationMs { get; set; }
-    public bool Kill { get; set; }
+    public bool? Kill { get; set; }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj": {}
+    "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj": {}
   },
   "projects": {
-    "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj": {
+    "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj",
+        "projectUniqueName": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj",
         "projectName": "PersonalPerformance.Core",
-        "projectPath": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj",
+        "projectPath": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj",
         "packagesPath": "C:\\Users\\borge\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\obj\\",
+        "outputPath": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\borge\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -347,14 +347,14 @@
         }
       }
     },
-    "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj": {
+    "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj",
+        "projectUniqueName": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj",
         "projectName": "WarcraftLogsTracker",
-        "projectPath": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj",
+        "projectPath": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj",
         "packagesPath": "C:\\Users\\borge\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\obj\\",
+        "outputPath": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\borge\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -369,8 +369,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj": {
-                "projectPath": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj"
+              "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj": {
+                "projectPath": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj"
               }
             }
           }

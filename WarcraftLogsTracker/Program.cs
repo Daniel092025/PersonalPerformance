@@ -38,14 +38,14 @@ foreach (var report in performance.RecentReports)
 
         foreach (var fight in report.Fights.Take(5)) // Show first 5 fights
     {
-        var status = fight.Kill ? "✓ KILL" : "✗ WIPE";
+        var status = fight.Kill == true ? "✓ KILL" : "✗ WIPE";
         Console.WriteLine($"   {status} | {fight.BossName}");
         Console.WriteLine($"      DPS: {fight.Dps:N0} | Duration: {fight.DurationMs / 1000:N0}s");
     }
     Console.WriteLine();
 }
 
-/* 
+/* Test for å få en token
 try
 {
     var token = await service.GetAccessTokenAsync();

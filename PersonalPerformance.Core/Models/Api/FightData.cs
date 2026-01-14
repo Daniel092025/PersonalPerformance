@@ -9,10 +9,7 @@ public class FightData
     public string Name { get; set; } = string.Empty;
     
     [JsonPropertyName("kill")]
-    public bool Kill { get; set; }
-    
-    [JsonPropertyName("averageDPS")]
-    public double? AverageDPS { get; set; }
+    public bool? Kill { get; set; }
     
     [JsonPropertyName("startTime")]
     public double StartTime { get; set; }
