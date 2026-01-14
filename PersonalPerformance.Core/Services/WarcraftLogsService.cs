@@ -1,8 +1,6 @@
 using System.Net.Http.Headers;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Text.Json;
-using Microsoft.VisualBasic;
 using PersonalPerformance.Core.Models;
 using GraphQL;
 using GraphQL.Client.Http;
@@ -14,7 +12,6 @@ public class WarcraftLogsService : IWarcraftLogsService
 {
     private readonly HttpClient _httpClient;
     private readonly WarcraftLogsConfig _config;
-    private string? _cachedToken; 
     private GraphQLHttpClient? _graphQLClient;
 
     public WarcraftLogsService(HttpClient httpClient, WarcraftLogsConfig config)
@@ -45,7 +42,7 @@ public class WarcraftLogsService : IWarcraftLogsService
         string server,
         string region)
     {
-        var client = new GetGraphQLClientAsync();
+        var client = await GetGraphQLHttpClientAsync();
 
         // GraphQL query - Vi spesifiserer akkurat det vi vil ha
         var query = new GraphQLRequest
@@ -148,9 +145,9 @@ public class WarcraftLogsService : IWarcraftLogsService
                 {
                     FightId = fights.Id,
                     BossName = fights.Name,
-                    Dps = fights.AverageDps ?? 0,
+                    Dps = fights.AverageDPS ?? 0,
                     Kill = fights.Kill,
-                    DurationMs = fights.EndTime - fight.StartTime
+                    DurationMs = fights.EndTime - fights.StartTime
                 });
             }
 
@@ -188,10 +185,5 @@ public class WarcraftLogsService : IWarcraftLogsService
         var tokenResponse = JsonSerializer.Deserialize<TokenResponse>(jsonResponse);
 
         return tokenResponse?.AccessToken ?? throw new InvalidOperationException("No token received");
-    }
-
-    public async Task<PlayerPerformance> GetPlayerPerformanceAsync(string characterName, string server, string region)
-    {
-        throw new NotImplementedException();
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U3ql85Dyr3Q=",
+  "dgSpecHash": "hFxjMmwI/VA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj",
+  "projectFilePath": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\borge\\.nuget\\packages\\graphql.client\\6.1.0\\graphql.client.6.1.0.nupkg.sha512",
     "C:\\Users\\borge\\.nuget\\packages\\graphql.client.abstractions\\6.1.0\\graphql.client.abstractions.6.1.0.nupkg.sha512",

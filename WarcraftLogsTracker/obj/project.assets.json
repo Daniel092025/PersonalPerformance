@@ -482,6 +482,10 @@
       "PersonalPerformance.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GraphQL.Client": "6.1.0",
+          "GraphQL.Client.Serializer.SystemTextJson": "6.1.0"
+        },
         "compile": {
           "bin/placeholder/PersonalPerformance.Core.dll": {}
         },
@@ -1277,11 +1281,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj",
+      "projectUniqueName": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj",
       "projectName": "WarcraftLogsTracker",
-      "projectPath": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj",
+      "projectPath": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\WarcraftLogsTracker.csproj",
       "packagesPath": "C:\\Users\\borge\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\obj\\",
+      "outputPath": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\WarcraftLogsTracker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\borge\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1296,8 +1300,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj": {
-              "projectPath": "C:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj"
+            "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj": {
+              "projectPath": "c:\\Users\\borge\\Documents\\KodeHode\\PersonalPerformance\\PersonalPerformance.Core\\PersonalPerformance.Core.csproj"
             }
           }
         }
