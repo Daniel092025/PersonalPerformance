@@ -4,6 +4,9 @@ using System.Text;
 using System.Text.Json;
 using Microsoft.VisualBasic;
 using PersonalPerformance.Core.Models;
+using GraphQL;
+using GraphQL.Client.Http;
+using GraphQL.Client.Serializer.SystemTextJson;
 
 namespace PersonalPerformance.Core.Services;
 
@@ -138,7 +141,22 @@ public class WarcraftLogsService : IWarcraftLogsService
                 StartTime = DateTimeOffset.FromUnixTimeMilliseconds(report.StartTime).DateTime,
                 Fights = new List<FightPerformance>()
             };
+
+            foreach (var fights in report.Fights ?? Enumerable.Empty<FightData>())
+            {
+                summary.Fights.Add(new FightPerformance
+                {
+                    FightId = fights.Id,
+                    BossName = fights.Name,
+                    Dps = fights.AverageDps ?? 0,
+                    Kill = fights.Kill,
+                    DurationMs = fights.EndTime - fight.StartTime
+                });
+            }
+
+            performance.RecentReports.Add(summary);
         }
+        return performance;
 
     }
 
