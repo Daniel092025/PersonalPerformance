@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace PersonalPerformance.Core.Models;
+namespace PersonalPerformance.Core.Models.Api;
 
 public class TokenResponse
 {

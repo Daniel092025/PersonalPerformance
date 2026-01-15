@@ -1,5 +1,7 @@
 using System.Text.Json.Serialization;
 
+namespace PersonalPerformance.Core.Models.Api;
+
 public class ReportData
 {
     [JsonPropertyName("code")]

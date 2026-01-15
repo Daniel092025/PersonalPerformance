@@ -2,6 +2,8 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using PersonalPerformance.Core.Models;
+using PersonalPerformance.Core.Models.Api;
+using PersonalPerformance.Core.Configuration;
 using GraphQL;
 using GraphQL.Client.Http;
 using GraphQL.Client.Serializer.SystemTextJson;

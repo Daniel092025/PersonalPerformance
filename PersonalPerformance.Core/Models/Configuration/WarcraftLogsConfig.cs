@@ -1,4 +1,4 @@
-namespace PersonalPerformance.Core.Models;
+namespace PersonalPerformance.Core.Configuration;
 
 public class WarcraftLogsConfig
 {

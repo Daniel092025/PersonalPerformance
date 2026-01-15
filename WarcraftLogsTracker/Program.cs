@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using PersonalPerformance.Core.Models;
 using PersonalPerformance.Core.Services;
+using PersonalPerformance.Core.Configuration;
 
 
 var config = new ConfigurationBuilder()
