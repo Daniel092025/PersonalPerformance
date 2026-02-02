@@ -87,18 +87,18 @@ Håndterer alt av API kommunikasjon og data transformasjon.
 - `MapToPlayerPerformance()`: Transforms API DTOs til domain modeller (models)
 
 
-##  Setup Instructions
+##  Setup
 
-### Prerequisites
+### Krav til bruk
 - .NET 8.0 SDK or later
 - Warcraft Logs API account
 
-### 1. Get API Credentials
+### 1. API Credentials
 1. Visit https://www.warcraftlogs.com/api/clients/
 2. Create a new client
 3. Save your Client ID and Client Secret
 
-### 2. Configure Application
+### 2. Konfigure Applikasjonen
 Create/update `appsettings.json`:
 ```json
 {
@@ -110,12 +110,12 @@ Create/update `appsettings.json`:
 }
 ```
 
-### 3. Install Dependencies
+### 3. Installere Dependencies
 ```bash
 dotnet restore
 ```
 
-### 4. Run
+### 4. Kjøre
 ```bash
 dotnet run
 ``` 
