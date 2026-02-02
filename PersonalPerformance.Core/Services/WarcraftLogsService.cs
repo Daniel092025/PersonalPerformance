@@ -140,18 +140,22 @@ public class WarcraftLogsService : IWarcraftLogsService
                 Fights = new List<FightPerformance>()
             };
 
-            foreach (var fights in report.Fights ?? Enumerable.Empty<FightData>())
+            foreach (var fight in report.Fights ?? Enumerable.Empty<FightData>())
             {
+                Console.WriteLine($"DEBUG: Fight '{fight.Name}' - Kill: {fight.Kill}");
 
-                if (string.IsNullOrEmpty(fights.Name) || fights.Name.Contains("Trash"))
-                continue;
+               bool isTrash = fight.Kill == null || 
+                            string.IsNullOrEmpty(fight.Name) || 
+                            fight.Name.Contains("Trash", StringComparison.OrdinalIgnoreCase);
+                if (isTrash) continue;
+                
                 summary.Fights.Add(new FightPerformance
                 {
-                    FightId = fights.Id,
-                    BossName = fights.Name,
+                    FightId = fight.Id,
+                    BossName = fight.Name,
                     Dps = 0,
-                    Kill = fights.Kill ?? false,
-                    DurationMs = fights.EndTime - fights.StartTime
+                    Kill = fight.Kill ?? false,
+                    DurationMs = fight.EndTime - fight.StartTime
                 });
             }
 
