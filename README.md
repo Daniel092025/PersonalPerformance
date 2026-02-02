@@ -1,22 +1,36 @@
-# PersonalPerformance
+# Warcraft Logs Performance Tracker
 
-A .NET application for tracking and analyzing personal performance data from Warcraft Logs.
+En C# konsoll applikasjon som henter og viser World of Warcraft raid ytelses data fra Warcraft Logs API
 
-## Projects
+## Projekt
 
-- **PersonalPerformance.Core** - Core domain models and business logic
-- **WarcraftLogsTracker** - Integration with the Warcraft Logs API
+Prosjektet demonstrer API integrasjon i C# med:
+- OAuth2 authentication
+- GraphQL API consumption
+- Ren arkitektur
+- Async/await
+- Konfigurasjonsstyring
+- Data transformation layers
 
-## Requirements
+## Models
 
-- .NET 8.0 or later
+### Configuration
+**Purpose**: Lagre applikasjon settings og API credentials.
+- **`WarcraftLogsConfig`**: Holde API client ID, secret og base URL
+  - Leser fra `appsettings.json`
+  - Injecter inn i  services som trenger API tilgang.
 
-## Getting Started
+### Domain Models (Models/Domain/)
+**Purpose**: Representerer data
 
-1. Clone the repository
-2. Open `PersonalPerformance.sln` in Visual Studio or your preferred IDE
-3. Build and run the solution
+- **`PlayerPerformance`**
+  - Inneholder: Character name, server, og liste over nylige rapporter.
+  - Dette er hva appen jobber med internt.
 
-## License
+- **`ReportSummary`**
+  - Inneholder report code, title, start time
 
-MIT
+- **`FightPerformance`**
+  - Boss name, DPS, kill status, duration
+
+  ### API Models (Models/Api/)

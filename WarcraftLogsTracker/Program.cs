@@ -5,7 +5,7 @@ using PersonalPerformance.Core.Configuration;
 
 
 var config = new ConfigurationBuilder()
-    .SetBasePath(Directory.GetCurrentDirectory())
+    .SetBasePath(AppContext.BaseDirectory)
     .AddJsonFile("appsettings.json", optional: false)
     .AddUserSecrets<Program>()
     .Build();

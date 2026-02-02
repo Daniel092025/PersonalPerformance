@@ -142,6 +142,9 @@ public class WarcraftLogsService : IWarcraftLogsService
 
             foreach (var fights in report.Fights ?? Enumerable.Empty<FightData>())
             {
+
+                if (string.IsNullOrEmpty(fights.Name) || fights.Name.Contains("Trash"))
+                continue;
                 summary.Fights.Add(new FightPerformance
                 {
                     FightId = fights.Id,
