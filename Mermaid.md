@@ -19,7 +19,7 @@ graph TB
         WCL[Warcraft Logs API]
     end
 
-    subgraph "Models - Domain"
+    subgraph "Models - Output"
         PlayerPerf[PlayerPerformance]
         ReportSum[ReportSummary]
         FightPerf[FightPerformance]

@@ -20,7 +20,7 @@ Prosjektet demonstrer API integrasjon i C# med:
   - Leser fra `appsettings.json`
   - Injecter inn i  services som trenger API tilgang.
 
-### Domain Models (Models/Domain/)
+### Output (Models/Output/)
 **Representerer data**:
 
 - **`PlayerPerformance`**
